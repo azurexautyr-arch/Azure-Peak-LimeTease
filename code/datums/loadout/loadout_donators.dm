@@ -1275,3 +1275,8 @@
 	name = "Donator Item - Radiant Golden Mask"
 	path = /obj/item/clothing/mask/rogue/facemask/goldmask/radiant
 	ckeywhitelist = list("mystoganzi")
+
+/datum/loadout_item/donator/limewarden
+	name = "Donator Item - Ruthless Warden Axe"
+	path = /obj/item/enchantingkit/weapon/limewarden
+	ckeywhitelist = list("limetease", "gentlemanlyheadcrab")

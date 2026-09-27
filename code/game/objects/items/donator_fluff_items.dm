@@ -4705,3 +4705,10 @@ As Excaliber."
 	icon_state = "radiantgoldmask"
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+
+// LIMETEASE
+/obj/item/rogueweapon/stoneaxe/woodcut/wardenpick/limewarden
+	name = "Ruthless Warden Axe"
+	desc = "A fearsome axe forged in Hammerhold, it's masterful craftsmanship is signature of the famous dwarvish Fridelotta family."
+	icon_state = "limewarden"
+	icon = 'icons/obj/items/donor_weapons.dmi'

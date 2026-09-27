@@ -1621,3 +1621,9 @@
 	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a Steel Sabre."
 	target_items = list(/obj/item/rogueweapon/sword/sabre)
 	result_item = /obj/item/rogueweapon/sword/sabre/donator_limetease
+
+/obj/item/enchantingkit/weapon/limewarden
+	name = "'The Malignant Sabre' morphing elixir"
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of select Axes."
+	target_items = list(/obj/item/rogueweapon/stoneaxe/woodcut/wardenpick		= /obj/item/rogueweapon/stoneaxe/battle)
+	result_item = /obj/item/rogueweapon/stoneaxe/woodcut/wardenpick/limewarden
