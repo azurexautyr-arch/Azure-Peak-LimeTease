@@ -1304,6 +1304,7 @@
 	name = "Donator Item - Ruthless Warden Axe"
 	path = /obj/item/enchantingkit/weapon/limewarden
 	ckeywhitelist = list("limetease", "gentlemanlyheadcrab")
+
 /datum/loadout_item/donator/thedragmeme_scarletglove
 	name = "Donator Gift - Scarlet Gloves"
 	path = /obj/item/clothing/gloves/roguetown/rosa/two
