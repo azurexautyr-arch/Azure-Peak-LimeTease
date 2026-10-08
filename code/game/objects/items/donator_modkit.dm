@@ -1703,3 +1703,9 @@
 	target_items = list(
 		/obj/item/rogueweapon/sword/sabre/shamshir = /obj/item/rogueweapon/sword/sabre/shamshir/dono_scidragon_sand
 	)
+
+/obj/item/enchantingkit/weapon/limechain
+	name = "'The Artificed Chainsword' morphing elixir"
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a Steel Sabre."
+	target_items = list(/obj/item/rogueweapon/sword/sabre)
+	result_item = /obj/item/rogueweapon/sword/sabre/limechain

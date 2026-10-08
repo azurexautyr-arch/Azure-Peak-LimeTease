@@ -4806,3 +4806,10 @@ As Excaliber."
 	icon_state = "radiantgoldmask"
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+
+// LIMETEASE
+/obj/item/rogueweapon/sword/sabre/limechain
+	name = "Artificed Chainsword"
+	desc = "A chainsword made by an insane artificer befitting only the most deranged and lost of minds. BLOOD IS FUEL. HELL IS FULL."
+	icon_state = "limechain"
+	icon = 'icons/obj/items/donor_weapons.dmi'
