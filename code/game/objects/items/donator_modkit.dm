@@ -1709,3 +1709,9 @@
 	target_items = list(
 		/obj/item/rogueweapon/sword/sabre/shamshir = /obj/item/rogueweapon/sword/sabre/shamshir/dono_scidragon_sand
 	)
+
+/obj/item/enchantingkit/weapon/limeMaxe
+	name = "'The Gilded Claw' morphing elixir"
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a Steel Poleaxe."
+	target_items = list(/obj/item/rogueweapon/greataxe/steel/knight)
+	result_item = /obj/item/rogueweapon/greataxe/steel/knight/limeMaxe

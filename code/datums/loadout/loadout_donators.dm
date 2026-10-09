@@ -1336,3 +1336,8 @@
 	name = "Donator Item - Blortz Incrusted Blacksteel Ring"
 	path = /obj/item/clothing/ring/lief_ring
 	ckeywhitelist = list("linxsysart", "pessime959")
+
+/datum/loadout_item/donator/limeMaxe
+	name = "Donator Kit - The Gilded Claw"
+	path = /obj/item/enchantingkit/weapon/limeMaxe
+	ckeywhitelist = list("limetease")

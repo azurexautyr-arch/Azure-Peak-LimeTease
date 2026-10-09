@@ -4830,3 +4830,9 @@ As Excaliber."
 	icon_state = "radiantgoldmask"
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+
+/obj/item/rogueweapon/greataxe/steel/knight/limeMaxe
+	name = "The Gilded Claw"
+	desc = "A poleaxe of exquisite craftsmanship, forged from the finest gold and adorned with a royal purple cloth. Its blade is sharp enough to cleave through armor, and its weight is perfectly balanced for swift strikes."
+	icon_state = "limeMaxe"
+	icon = 'icons/obj/items/donor_weapons_64.dmi'
