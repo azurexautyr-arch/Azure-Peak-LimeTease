@@ -72,7 +72,6 @@ GLOBAL_LIST_INIT(taur_types, subtypesof(/obj/item/bodypart/taur))
 
 	offset_x = -16
 	taur_icon_state = "altnaga_s"
-	clip_mask_state = "clip_mask_altnaga"
 
 	has_taur_color = TRUE
 
@@ -89,7 +88,7 @@ GLOBAL_LIST_INIT(taur_types, subtypesof(/obj/item/bodypart/taur))
 
 	offset_x = -16
 	taur_icon_state = "saiga_s"
-	clip_mask_state = "clip_mask_saiga_def"
+	clip_mask_state = "clip_mask_saiga"
 
 	has_taur_color = TRUE
 
@@ -98,15 +97,6 @@ GLOBAL_LIST_INIT(taur_types, subtypesof(/obj/item/bodypart/taur))
 
 	offset_x = -16
 	taur_icon_state = "goat_s"
-	clip_mask_state = "clip_mask_goat_def"
-
-	has_taur_color = TRUE
-
-/obj/item/bodypart/taur/bunny
-	name = "Bunny Body"
-
-	offset_x = -16
-	taur_icon_state = "bunny_s"
-	clip_mask_state = "clip_mask_bunny_def"
+	clip_mask_state = "clip_mask_goat"
 
 	has_taur_color = TRUE
