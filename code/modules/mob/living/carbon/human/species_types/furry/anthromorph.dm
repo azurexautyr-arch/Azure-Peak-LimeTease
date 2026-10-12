@@ -23,20 +23,8 @@
 	allowed_taur_types = list(
 		/obj/item/bodypart/taur/lamia,
 		/obj/item/bodypart/taur/spider,
-		/obj/item/bodypart/taur/canine,
-		/obj/item/bodypart/taur/noodle,
 		/obj/item/bodypart/taur/horse,
 		/obj/item/bodypart/taur/goat,
-		/obj/item/bodypart/taur/deer,
-		/obj/item/bodypart/taur/redpanda,
-		/obj/item/bodypart/taur/feline,
-		/obj/item/bodypart/taur/snep,
-		/obj/item/bodypart/taur/sloog,
-		/obj/item/bodypart/taur/ant,
-		/obj/item/bodypart/taur/wasp,
-		/obj/item/bodypart/taur/bunny,
-		/obj/item/bodypart/taur/orca,
-		/obj/item/bodypart/taur/fatlamia,
 	)
 
 	inherent_biotypes = MOB_ORGANIC|MOB_HUMANOID

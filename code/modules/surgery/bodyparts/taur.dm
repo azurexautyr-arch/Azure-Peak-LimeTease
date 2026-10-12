@@ -23,8 +23,6 @@
 	// taur_icon_state sets which icon to use from icons/mob/taurs.dmi to render
 	// (we don't use icon_state to avoid duplicate rendering on dropped organs)
 	var/taur_icon_state = "naga_s"
-	// Optional markings overlay state for taur sprites.
-	var/taur_markings_state = null
 
 	// We can Blend() a color with the base greyscale color, only some tails support this
 	var/has_taur_color = FALSE
@@ -75,114 +73,6 @@ GLOBAL_LIST_INIT(taur_types, subtypesof(/obj/item/bodypart/taur))
 	offset_x = -16
 	taur_icon_state = "altnaga_s"
 	clip_mask_state = "clip_mask_altnaga"
-
-	has_taur_color = TRUE
-
-/obj/item/bodypart/taur/fatlamia
-	name = "Fat Lamia Tail"
-
-	offset_x = -16
-	taur_icon_state = "nagafat_s"
-	clip_mask_state = "clip_mask_nagafat"
-
-	has_taur_color = TRUE
-
-/obj/item/bodypart/taur/orca
-	name = "Orca Tail"
-
-	offset_x = -16
-	taur_icon_state = "orcamermaid_s"
-	clip_mask_state = "clip_mask_orcamermaid"
-
-	has_taur_color = TRUE
-
-/obj/item/bodypart/taur/canine
-	name = "Canine Body"
-
-	offset_x = -16
-	taur_icon_state = "canine_s"
-	clip_mask_state = "clip_mask_canine_s"
-
-	has_taur_color = TRUE
-
-/obj/item/bodypart/taur/dragon
-	name = "Dragon Body"
-
-	offset_x = -16
-	taur_icon_state = "drake2_s"
-	clip_mask_state = "clip_mask_drake2_s"
-
-	has_taur_color = TRUE
-
-/obj/item/bodypart/taur/noodle
-	name = "Noodle Dragon Body"
-
-	offset_x = -16
-	taur_icon_state = "noodle_s"
-	clip_mask_state = "clip_mask_noodle"
-
-	has_taur_color = TRUE
-
-/obj/item/bodypart/taur/deer
-	name = "Deer Body"
-
-	offset_x = -16
-	taur_icon_state = "deer_s"
-	clip_mask_state = "clip_mask_deer"
-
-	has_taur_color = TRUE
-
-/obj/item/bodypart/taur/redpanda
-	name = "Red Panda Body"
-	offset_x = -16
-	taur_icon_state = "redpanda_s"
-	clip_mask_state = "clip_mask_redpanda_def"
-
-	has_taur_color = TRUE
-
-
-/obj/item/bodypart/taur/feline
-	name = "Feline Body"
-
-	offset_x = -16
-	taur_icon_state = "feline_s"
-	clip_mask_state = "clip_mask_feline_def"
-
-	has_taur_color = TRUE
-
-/obj/item/bodypart/taur/snep
-	name = "Tempest Body"
-
-	offset_x = -16
-	taur_icon_state = "tempest_s"
-	clip_mask_state = "clip_mask_tempest_def"
-
-	has_taur_color = TRUE
-
-/obj/item/bodypart/taur/sloog
-	name = "Sloog Body"
-
-	offset_x = -16
-	taur_icon_state = "sloog_s"
-	clip_mask_state = "clip_mask_sloog_def"
-
-	has_taur_color = TRUE
-
-/obj/item/bodypart/taur/ant
-	name = "Ant Body"
-
-	offset_x = -16
-	taur_icon_state = "ant_s"
-	clip_mask_state = "clip_mask_ant_def"
-
-	has_taur_color = TRUE
-
-/obj/item/bodypart/taur/wasp
-	name = "Wasp Body"
-
-	offset_x = -16
-	taur_icon_state = "wasp_s"
-	clip_mask_state = "clip_mask_wasp_def"
 
 	has_taur_color = TRUE
 
