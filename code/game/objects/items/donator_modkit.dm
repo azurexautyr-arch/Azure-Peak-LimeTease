@@ -1709,3 +1709,10 @@
 	target_items = list(
 		/obj/item/rogueweapon/sword/sabre/shamshir = /obj/item/rogueweapon/sword/sabre/shamshir/dono_scidragon_sand
 	)
+
+/obj/item/enchantingkit/weapon/yoshi_estoc
+	name = "'The Malignant Sabre' morphing elixir"
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a Steel Sabre."
+	target_items = list(/obj/item/rogueweapon/sword/long/ap)
+	result_item = /obj/item/rogueweapon/sword/long/ap/yoshi_estoc
+
