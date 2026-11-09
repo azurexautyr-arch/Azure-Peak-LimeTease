@@ -11,7 +11,7 @@
 	fat_yield = 20
 
 /obj/item/reagent_containers/food/snacks/fat/attackby(obj/item/I, mob/living/user, params)
-	var/found_table = locate(/obj/structure/table) in (loc)
+	var/found_table = has_table_surface(loc)
 	update_cooktime(user)
 	if(istype(I, /obj/item/reagent_containers/food/snacks/rogue/meat/mince))
 		if(isturf(loc)&& (found_table))
@@ -133,9 +133,9 @@
 					return
 				if(success)
 					changefood(/obj/item/reagent_containers/food/snacks/tallow/red, user)
-	if(istype(I, /obj/item/ash))
+	if(is_ash_item(I))
 		if(alert(user, "STAIN THE TALLOW?", "IT'S JUST ASH", "YES", "NO") != "NO")
 			changefood(/obj/item/reagent_containers/food/snacks/tallow/black, user)
-			qdel(I)
+			consume_ash_unit(I)
 		else
 			return

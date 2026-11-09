@@ -56,7 +56,7 @@
 	if(occupied)
 		to_chat(user, span_warning("Someone is already hiding under [src]!"))
 		return
-	if(!do_after(user, sneaktime, src))
+	if(!do_after(user, sneaktime, target = src))
 		return
 	user.forceMove(src)
 	occupied = TRUE
@@ -228,7 +228,7 @@
 	. += span_info("Click-dragging yourself onto a seat, while on the same tile, will 'buckle' you in; this represents your character sitting down. Sitting down gradually restores energy, and can be used to prop up people who'd normally be unable to stand.")
 	. += span_info("Left-click on the seat to 'unbuckle' yourself; this represents your character getting up. You can alternatively get up by pressing the 'RESIST' hotkey.")
 	. += span_info("This can be done to other people, as well. Click-dragging someone onto a seat will sit them down, and left-clicking the seat will 'unbuckle' them once more.")
-	. += span_info("Restrained people are unable to 'unbuckle' themeselves, or otherwise get up from whatever they're tied to. Pressing the 'RESIST' hotkey will allow them to start struggling out of their restraints. The time needed to accomplish this scales with the character's Strength.")
+	. += span_info("Restrained people are unable to 'unbuckle' themselves, or otherwise get up from whatever they're tied to. Pressing the 'RESIST' hotkey will allow them to start struggling out of their restraints. The time needed to accomplish this scales with the character's Strength.")
 	. += span_info("Some chairs and stools can be used as improvised weapons, by click-dragging them onto yourself. Activating a chair or stool in your hand will set it down in whatever direction you're facing.")
 
 /obj/item/chair/rogue/getonmobprop(tag)
@@ -406,6 +406,7 @@
 	anchored = TRUE
 	can_buckle = TRUE
 	buckle_lying = 90
+	drag_slowdown = 5
 	sleepy = 3
 	debris = list(/obj/item/grown/log/tree/small = 1)
 	hidingspot = TRUE
@@ -421,6 +422,7 @@
 	. += span_info("Once awake, hit the 'RESIST' hotkey or left-click the bed to 'unbuckle' yourself. Once unbuckled, pressing the 'V' key will allow you to fully rise up.")
 	. += span_info("Note that you can still sleep anywhere you wish, even without a bed, by simply laying down and closing your eyes. While this can work in a pinch to stave off tiredness or bolster your characters to survive a critical wound, it's much less ideal.")
 	. += span_info("Some structures can be used as hiding places. Toggle the 'SNEAK' button on your HUD, then click the structure to hide in it. You can stop hiding by clicking the structure again, or by moving out of it.")
+	. += span_info("Beds can be unanchored with a stake in order to be dragged around. Use the stake on it again to re-anchor it.")
 
 /obj/structure/bed/rogue/OnCrafted(dirin)
 	dirin = turn(dirin, 180)
@@ -444,7 +446,7 @@
 	if(occupied)
 		to_chat(user, span_warning("Someone is already hiding under [src]!"))
 		return
-	if(!do_after(user, sneaktime, src))
+	if(!do_after(user, sneaktime, target = src))
 		return
 	user.forceMove(src)
 	occupied = TRUE
@@ -467,6 +469,21 @@
 	var/datum/component/simple_rotation/rotcomp = GetComponent(/datum/component/simple_rotation)
 	if(rotcomp)
 		rotcomp.HandRot(rotcomp,user,ROTATION_CLOCKWISE)
+
+/obj/structure/bed/rogue/attackby(obj/item/I, mob/living/user)
+	if(istype(I, /obj/item/grown/log/tree/stake))
+		if(hiddenguy)
+			to_chat(user, span_warning("Someone is hiding under there!"))
+			return
+		if(anchored)
+			anchored = FALSE
+			to_chat(user, span_warning("[src] can now be moved."))
+		else
+			anchored = TRUE
+			to_chat(user, span_warning("You anchor [src]."))
+		playsound(src,pick('sound/foley/woodclimb.ogg'), 100, TRUE)
+		return
+	..()
 
 /obj/structure/bed/rogue/shit
 	name = "straw bed"
